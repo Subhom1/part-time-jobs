@@ -26,3 +26,63 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-container {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input.form-input {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  color: black;
+}
+
+button.submit-button {
+  background-color: #253456 !important;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 200px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-names {
+  width: 47%;
+}

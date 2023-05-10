@@ -28,6 +28,11 @@ export default function Modal(props) {
           className="fa-solid fa-xmark duration-300 hover:rotate-90 text-lg sm:text-3xl cursor-pointer"
         ></i>
       </div>
+      <div className="p-4 flex flex-col gap-3">
+        <h2 className="select-none duration-300 hover:pl-2 cursor-pointer">
+          Contact US
+        </h2>
+      </div>
       {currentUser && (
         <div className="p-4 flex flex-col gap-3">
           <h2
@@ -44,5 +49,5 @@ export default function Modal(props) {
       )}
     </div>,
     _document.getElementById("portal")
-  );
+  );
 }

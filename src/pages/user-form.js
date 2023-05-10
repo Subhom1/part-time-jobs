@@ -8,6 +8,7 @@ export default function FormPage() {
     workExperience: '',
     address: '',
     emailAddress: '',
+    file: '',
   });
 
   const handleChange = (event) => {
@@ -22,11 +23,11 @@ export default function FormPage() {
 
   return (
     <div className="container">
-      <h1>Form</h1>
+      <h1 className='text-4xl my-5'>User Information</h1>
       <form onSubmit={handleSubmit} className="form-container">
       <div className="form-row">
       <div className="form-group form-names">
-        <input
+        <input className='form-input'
             type="text"
             id="firstName"
             name="firstName"
@@ -37,7 +38,7 @@ export default function FormPage() {
         />
         </div>
         <div className="form-group form-names">
-        <input
+        <input className='form-input'
             type="text"
             id="lastName"
             name="lastName"
@@ -48,8 +49,18 @@ export default function FormPage() {
         />
         </div>
     </div>
+    <div className="form-group">
+        <input className='form-input'
+            type="email"
+            name="emailAddress"
+            id="emailAddress"
+            placeholder='Email Address'
+            value={formData.emailAddress}
+            onChange={handleChange}
+          />
+        </div>
         <div className="form-group">
-          <input
+          <input className='form-input'
             type="text"
             name="educationQualification"
             id="educationQualification"
@@ -59,7 +70,7 @@ export default function FormPage() {
           />
         </div>
         <div className="form-group">
-          <input
+          <input className='form-input'
             type="text"
             name="workExperience"
             id="workExperience"
@@ -68,8 +79,9 @@ export default function FormPage() {
             onChange={handleChange}
           />
         </div>
+        
         <div className="form-group">
-          <input
+          <input className='form-input'
             type="text"
             name="address"
             id="address"
@@ -79,16 +91,19 @@ export default function FormPage() {
           />
         </div>
         <div className="form-group">
-          <input
-            type="email"
-            name="emailAddress"
-            id="emailAddress"
-            placeholder='Email Address'
-            value={formData.emailAddress}
+          <label className='text-black ml-3 mb-2'>Upload your CV</label>
+          <input className='form-input' accept='.pdf' 
+            type="file"
+            name="file"
+            id="file"
+            value={formData.file}
             onChange={handleChange}
           />
         </div>
-        <button type="submit">Submit</button>
+        <div className='flex'> 
+        <button onClick={() => history.back()} className='submit-button'>Home</button>
+        <button className='submit-button' type="submit">Submit</button>
+        </div>
       </form>
     </div>
   );

@@ -73,8 +73,4 @@ export default function Login({ flag }) {
       )}
     </div>
   );
-
 }
-
-}
-
